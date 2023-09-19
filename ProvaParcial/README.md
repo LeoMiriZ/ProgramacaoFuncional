@@ -14,5 +14,6 @@ Obs 3: Gere as tabelas do modelo via pyhton e entregue em um script separado
 
 Modelo:
 
+<img src="/ProvaParcial/ProvaModelo.PNG">
 
 
