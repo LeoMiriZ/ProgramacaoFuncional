@@ -12,7 +12,7 @@ caso de cardinalidade 1:N no modelo de dados.
 
 Obs 3: Gere as tabelas do modelo via pyhton e entregue em um script separado
 
-Modelo:
+## Modelo
 
 <img src="/ProvaParcial/ProvaModelo.PNG">
 
