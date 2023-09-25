@@ -21,6 +21,26 @@ driver = webdriver.Firefox(firefox_binary=binary, executable_path=r'C:\\geckodri
 
 driver.get(url)
 
-driver.find_element(By.XPATH, "//div[@class='Crom_container_C45Ti crom-container']//table//thead/tr//th[@field='PTS']")
+time.sleep(10)
 
+element = driver.find_element(By.XPATH, "//*[@class='Crom_table__p1iZz']")
 
+print(element.text)
+
+html_content = element.get_attribute('outerHTML')
+
+print(html_content)
+
+soup = BeautifulSoup(html_content, 'lxml')
+
+table = soup.find(name='table')
+
+print(table)
+
+df_full = pd.read_html(str(table))
+
+df_full[0].to_csv('nba_scraping.csv', index=False)
+
+print(type(df_full))
+
+print('Done')
